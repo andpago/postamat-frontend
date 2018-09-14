@@ -1,0 +1,30 @@
+{
+  "name": "postamat-frontend",
+  "version": "1.0.0",
+  "description": "A simple blogging platform with a nice CMS.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/html/index.html -p 3000",
+    "build": "parcel build ./src/html/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andpago/postamat-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andpago/postamat-frontend/issues"
+  },
+  "homepage": "https://github.com/andpago/postamat-frontend#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3"
+  }
+}
