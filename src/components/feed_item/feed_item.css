@@ -1,0 +1,35 @@
+.feed_item {
+    width: 800px;
+    margin-left: 100px;
+    border: 1px solid gray;
+    padding: 20px;
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+
+.feed_item_text_section, .feed_item_text_section {
+    display: inline-block;
+}
+
+.feed_item_text_section {
+    flex: 8;
+    border-right: 1px solid gray;
+}
+
+.feed_item_title {
+    text-align: center;
+}
+
+.feed_item_top_section {
+    border-bottom: 1px solid gray;
+}
+
+.feed_item_bottom_section {
+    display: flex;
+}
+
+.feed_item_meta_section {
+    flex: 2;
+    padding: 10px;
+    min-height: 200px;
+}
