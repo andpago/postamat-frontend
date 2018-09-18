@@ -5,19 +5,20 @@ import PublicFeed from "./components/public_feed/public_feed.js";
 import FunctionalButton from "./components/functional_button/functional_button.js";
 
 import './index.css';
+import {PAGE_SIZE} from "./settings";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            feed_limit: 5,
+            feed_limit: PAGE_SIZE,
         };
         this.load_more = this.load_more.bind(this);
     }
 
     load_more() {
-        this.setState(state => ({feed_limit: state.feed_limit + 5}));
+        this.setState(state => ({feed_limit: state.feed_limit + PAGE_SIZE}));
     }
 
     render(){
