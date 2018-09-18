@@ -16,31 +16,45 @@ class PublicFeed extends React.Component {
         };
 
         this.load_next = this.load_next.bind(this);
+        console.log("constructor");
+        console.log(this);
     }
 
     load_next() {
-        this.setState(state => ({
-            feed_items: state.feed_items.concat([<FeedItem
+        let items = [];
+
+        for (let i = this.state.feed_items.length; i < this.props.limit; i++) {
+            items.push(<FeedItem
                 title="Hello World"
                 text={ LOREM }
                 username="admin"
-                key={ state.feed_items.length - 1 } />]),
+                key={ i } />);
+        }
+
+        this.setState(state => ({
+            feed_items: state.feed_items.concat(items),
         }));
     }
 
     componentDidMount() {
         this.load_next();
-        this.load_next();
-        this.load_next();
+    }
+
+    componentDidUpdate() {
+        if (this.state.feed_items.length < this.props.limit) {
+            this.load_next();
+        }
     }
 
     render() {
+        console.log("render");
+
         return (
             <div className="public_feed">
                 { this.state.feed_items }
             </div>
         );
     }
-};
+}
 
 export default PublicFeed;
