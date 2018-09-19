@@ -3,9 +3,12 @@ import { render } from "react-dom";
 import Header from "./components/header/header.js";
 import PublicFeed from "./components/public_feed/public_feed.js";
 import FunctionalButton from "./components/functional_button/functional_button.js";
+import {BrowserRouter} from 'react-router-dom';
 
 import './index.css';
 import {PAGE_SIZE} from "./settings";
+import {Route, Switch} from "react-router";
+import Post from './components/post/post.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -22,13 +25,24 @@ class App extends React.Component {
     }
 
     render(){
-      return (
-        <div>
-          <Header />
-          <PublicFeed limit={ this.state.feed_limit } />
-          <FunctionalButton action={ this.load_more } text={ `load more` } />
-        </div>
-      )
+        return (
+            <BrowserRouter>
+                <div>
+                    <Header />
+                    <div className="main_wrapper">
+                        <Switch>
+                            <Route path={`/`} exact>
+                                <div className={"public_feed_page"}>
+                                    <PublicFeed limit={ this.state.feed_limit } />
+                                    <FunctionalButton action={ this.load_more } text={ `load more` } />
+                                </div>
+                            </Route>
+                            <Route path={`/post/:id`} component={Post} />
+                        </Switch>
+                    </div>
+                </div>
+            </BrowserRouter>
+        )
     }
 }
 

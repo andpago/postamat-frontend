@@ -50,7 +50,8 @@ class PublicFeed extends React.Component {
                 title={item.title}
                 key={this.state.feed_items.length + i}
                 text={item.text}
-                username={item.author} />);
+                username={item.author}
+                id={item.id} />);
 
         this.setState(state => ({
             feed_items: state.feed_items.concat(item_nodes),

@@ -1,0 +1,9 @@
+.post {
+    border: 1px solid lightgray;
+    background: #eee;
+    padding: 10px;
+}
+
+.post_title {
+    text-align: center;
+}

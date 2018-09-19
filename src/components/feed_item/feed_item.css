@@ -1,10 +1,9 @@
 .feed_item {
-    width: 800px;
-    margin-left: 100px;
     border: 1px solid gray;
     padding: 20px;
     padding-top: 0;
     margin-bottom: 20px;
+    width: 60%;
 }
 
 .feed_item_text_section, .feed_item_text_section {
