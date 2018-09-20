@@ -6,20 +6,19 @@ import {Link} from "react-router-dom";
 
 export default props => (
     <div className="feed_item">
-        <div className="feed_item_top_section">
-            <Link to={'/post/' + props.id}>
-                <h1 className="feed_item_title">
-                    { props.title }
-                </h1>
-            </Link>
+        <div className="top_section">
+            <div className="top_section_left">
+                <Link to={'/post/' + props.id}>
+                    <h2>{ props.title }</h2>
+                </Link>
+            </div>
+            <div className="top_section_right">
+                <img src={ props.author.avatar } className="feed_item_avatar"/>
+                <span>@{ props.author.username }</span>
+            </div>
         </div>
-        <div className="feed_item_bottom_section">
-            <div className="feed_item_text_section">
-                <SmartParagraph text={ props.text } />
-            </div>
-            <div className="feed_item_meta_section">
-                { props.username }
-            </div>
+        <div className="bottom-section">
+            <SmartParagraph text={ props.text } />
         </div>
     </div>
 );

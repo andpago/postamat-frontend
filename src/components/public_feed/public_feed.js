@@ -50,7 +50,7 @@ class PublicFeed extends React.Component {
                 title={item.title}
                 key={this.state.feed_items.length + i}
                 text={item.text}
-                username={item.author}
+                author={item.author}
                 id={item.id} />);
 
         this.setState(state => ({
