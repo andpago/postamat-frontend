@@ -3,5 +3,7 @@ html {
 }
 
 .main_wrapper {
-    padding: 60px;
+    padding-left: 120px;
+    padding-right: 300px;
+    padding-bottom: 30px;
 }
