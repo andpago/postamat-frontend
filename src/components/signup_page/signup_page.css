@@ -1,0 +1,14 @@
+input#avatar {
+    display: none;
+}
+
+button.fake_loader {
+    box-sizing: content-box;
+    border: 1px solid black;
+    padding: 5px;
+    height: 20px;
+    margin: 0;
+    display: inline-block;
+    border-radius: 0 5px 5px 0;
+    width: calc(50% - 12px);
+}

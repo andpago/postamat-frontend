@@ -7,3 +7,45 @@ html {
     padding-right: 300px;
     padding-bottom: 30px;
 }
+
+button, input[type=submit] {
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 5px;
+    background: #f8f8f8;
+}
+
+.medium_form {
+    width: 300px;
+}
+
+.medium_form label, .medium_form input:not([type=submit]) {
+    border: 1px solid black;
+    padding: 5px;
+    height: 20px;
+    width: calc(50% - 12px);
+}
+
+.medium_form label {
+    background: #eee;
+    border-right: 1px solid transparent;
+    border-radius: 5px 0 0 5px;
+    display: inline-block;
+}
+
+.medium_form input:not([type=submit]) {
+    display: inline-block;
+    border-radius: 0 5px 5px 0;
+    box-shadow: inset 0 0 2px 0 gray;
+}
+
+.medium_form > div {
+    display: flex;
+    align-items: center;
+}
+
+.medium_form > * {
+    display: block;
+    margin: 0 0 10px 0;
+    width: 100%;
+}

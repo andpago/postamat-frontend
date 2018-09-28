@@ -1,5 +1,22 @@
-.header-brand {
+.header_brand {
 	font-family: monospace;
 	text-align: center;
 	font-size: 40pt;
+}
+
+.header {
+	display: flex;
+}
+
+.header_left {
+    flex: 5;
+}
+
+.header_right {
+    flex: 1;
+}
+
+.header_link {
+	text-decoration: none;
+	color: black;
 }

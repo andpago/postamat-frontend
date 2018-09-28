@@ -9,6 +9,8 @@ import './index.css';
 import {PAGE_SIZE} from "./settings";
 import {Route, Switch} from "react-router";
 import Post from './components/post/post.js';
+import LoginPage from './components/login_page/login_page.js';
+import SignupPage from './components/signup_page/signup_page.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -38,6 +40,8 @@ class App extends React.Component {
                                 </div>
                             </Route>
                             <Route path={`/post/:id`} component={Post} />
+                            <Route path={`/login/`} component={LoginPage} />
+                            <Route path={`/signup/`} component={SignupPage} />
                         </Switch>
                     </div>
                 </div>
