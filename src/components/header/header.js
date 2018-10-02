@@ -4,10 +4,11 @@ import './header.css';
 import LoginPanel from '../login_panel/login_panel.js';
 import FunctionalButton from "../functional_button/functional_button";
 import {setCookie} from "../../misc/cookies";
+import LogoutPanel from "../logout_panel/logout_panel";
 
 class Header extends React.Component {
 	render() {
-	    let panel = <FunctionalButton action={ () => {setCookie("token", "");document.location = document.location; } } text="Log out" />;
+	    let panel = <LogoutPanel/>;
 
 	    console.log(this.props.user);
 

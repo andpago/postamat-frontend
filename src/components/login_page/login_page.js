@@ -29,7 +29,6 @@ class LoginPage extends React.Component {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", document.forms.login.action);
         xhr.setRequestHeader("Content-type", "application/json");
-        xhr.send(JSON.stringify(data));
 
         xhr.onreadystatechange = () => {
             if (xhr.readyState !== 4) return;
@@ -42,7 +41,8 @@ class LoginPage extends React.Component {
                 document.location = '/';
                 console.log("logged in as " + this.state.username);
             }
-        }
+        };
+        xhr.send(JSON.stringify(data));
     }
 
 	typeUsername(e) {
